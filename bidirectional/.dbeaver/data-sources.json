@@ -1,0 +1,35 @@
+{
+	"folders": {},
+	"connections": {
+		"mariaDB-17e6c63faee-1659221b9f8f7619": {
+			"provider": "mysql",
+			"driver": "mariaDB",
+			"name": "hb-01-one-to-one-uni",
+			"save-password": true,
+			"navigator-show-only-entities": true,
+			"navigator-hide-folders": true,
+			"navigator-hide-virtual": true,
+			"read-only": false,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"database": "hb-01-one-to-one-uni",
+				"url": "jdbc:mysql://localhost:3306/hb-01-one-to-one-uni",
+				"type": "dev",
+				"auth-model": "native",
+				"handlers": {}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}
