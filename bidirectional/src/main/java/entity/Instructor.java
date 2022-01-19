@@ -75,19 +75,6 @@ public class Instructor {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Instructor intructor = (Instructor) o;
-        return id == intructor.id && Objects.equals(firstName, intructor.firstName) && Objects.equals(lastName, intructor.lastName) && Objects.equals(email, intructor.email) && Objects.equals(instructorDetail, intructor.instructorDetail);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, firstName, lastName, email, instructorDetail);
-    }
-
-    @Override
     public String toString() {
         return "Intructor{" +
                 "id=" + id +

@@ -64,24 +64,27 @@ public class InstructorDetail {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        InstructorDetail that = (InstructorDetail) o;
-        return id == that.id && Objects.equals(youtubeChannel, that.youtubeChannel) && Objects.equals(hobby, that.hobby);
+        if (o == this)
+            return true;
+        if (!(o instanceof InstructorDetail)) {
+            return false;
+        }
+        InstructorDetail instructorDetail = (InstructorDetail) o;
+        return id == instructorDetail.id && Objects.equals(youtubeChannel, instructorDetail.youtubeChannel) && Objects.equals(hobby, instructorDetail.hobby) && Objects.equals(instructor, instructorDetail.instructor);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, youtubeChannel, hobby);
+        return Objects.hash(id, youtubeChannel, hobby, instructor);
     }
 
-    @Override
-    public String toString() {
-        return "InstructorDetailClass{" +
-                "id=" + id +
-                ", youtubeChannel='" + youtubeChannel + '\'' +
-                ", hobby='" + hobby + '\'' +
-                '}';
-    }
+	@Override
+	public String toString() {
+		return "InstructorDetail [id=" + id + ", youtubeChannel=" + youtubeChannel + ", hobby=" + hobby + "]";
+	}
+
+
+
+    
 
 }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="sad.erd">
+	<entities>
+		<data-source id="mariaDB-17e6c81eabe-3d3051175add55e3">
+			<entity id="1" name="course" fq-name="`hb-03-one-to-many`.course" order="0" x="20" y="40">
+				<path name="hb-03-one-to-many"/>
+			</entity>
+			<entity id="2" name="instructor" fq-name="`hb-03-one-to-many`.instructor" order="1" border-width="3" x="254" y="103">
+				<path name="hb-03-one-to-many"/>
+			</entity>
+			<entity id="3" name="instructor_detail" fq-name="`hb-03-one-to-many`.instructor_detail" order="2" x="644" y="96">
+				<path name="hb-03-one-to-many"/>
+			</entity>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="FK_INSTRUCTOR" fq-name="`hb-03-one-to-many`.course.FK_INSTRUCTOR" type="fk" pk-ref="2" fk-ref="1"/>
+		<relation name="FK_DETAIL" fq-name="`hb-03-one-to-many`.instructor.FK_DETAIL" type="fk" pk-ref="3" fk-ref="2"/>
+	</relations>
+</diagram>
